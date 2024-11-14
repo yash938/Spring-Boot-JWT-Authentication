@@ -2,7 +2,6 @@ package com.JWT.JWT.Authnetication.ServiceImp;
 
 
 import Dto.PagebleResponse;
-import Dto.RoleDto;
 import Dto.UserDto;
 import com.JWT.JWT.Authnetication.Entity.Role;
 import com.JWT.JWT.Authnetication.Entity.User;
@@ -20,7 +19,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -72,12 +70,18 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public List<UserDto> getAllUser(int pageNumber, int pageSize, String sortBy, String sortDir) {
-        return null;
+    public PagebleResponse<UserDto> getAllUser(int pageNumber, int pageSize, String sortBy, String sortDir) {
+        Sort sort = (sortDir.equalsIgnoreCase("asc")) ? (Sort.by(sortBy).ascending()) : (Sort.by(sortBy).descending());
+        PageRequest pageRequest = PageRequest.of(pageNumber, pageSize, sort);
+        Page<User> all = userRepo.findAll(pageRequest);
+        PagebleResponse<UserDto> pageble = Helper.getPageble(all, UserDto.class);
+        return pageble;
     }
 
     @Override
-    public List<UserDto> deleteUser(Long id) {
-        return null;
+    public void deleteUser(Long id) {
+        userRepo.deleteById(id);
     }
+
+
 }
