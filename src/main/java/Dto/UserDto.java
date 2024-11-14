@@ -17,6 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class UserDto {
 
+    private Long userId;
     @NotBlank(message = "name cannot be null")
     private String name;
 
