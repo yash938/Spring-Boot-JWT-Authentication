@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.time.LocalDate;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     Logger logger  = LoggerFactory.getLogger(GlobalExceptionHandler.class);
@@ -15,7 +17,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(UserNotFoundException.class)
     public ResponseEntity<Exceptionhandler> UserNotFound(UserNotFoundException ex){
         logger.info("User not found {}",ex);
-        Exceptionhandler user = Exceptionhandler.builder().message("User is not found").success(false).httpStatus(HttpStatus.NOT_FOUND).build();
+        Exceptionhandler user = Exceptionhandler.builder().message("User is not found").success(false).httpStatus(HttpStatus.NOT_FOUND).localDate(LocalDate.now()).build();
         return new ResponseEntity<>(user,HttpStatus.NOT_FOUND);
     }
 

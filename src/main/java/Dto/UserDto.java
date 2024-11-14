@@ -8,7 +8,10 @@ import lombok.NoArgsConstructor;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,5 +32,6 @@ public class UserDto {
 
 
 
-    List<RoleDto> roleDtos = new ArrayList<>();
+    private Set<RoleDto> roles = new HashSet<>();
+
 }

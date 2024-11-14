@@ -16,6 +16,4 @@ public class RoleDto {
 
     private Long id;
     private String RoleName;
-
-    List<UserDto> userDtos  = new ArrayList<>();
 }

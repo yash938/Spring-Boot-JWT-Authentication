@@ -33,7 +33,7 @@ public class User
     private String phoneNo;
 
 
-    @ManyToMany(cascade = {CascadeType.MERGE}, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
     private List<Role> roles = new ArrayList<>();
 
 

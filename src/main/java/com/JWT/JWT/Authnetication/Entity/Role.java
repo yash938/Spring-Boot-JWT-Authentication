@@ -18,6 +18,6 @@ public class Role {
     private Long id;
     private String roleName;
 
-    @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "roles", fetch = FetchType.EAGER)
     List<User> user  = new ArrayList<>();
 }

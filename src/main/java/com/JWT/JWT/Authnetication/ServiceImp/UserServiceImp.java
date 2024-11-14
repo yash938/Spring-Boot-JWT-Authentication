@@ -12,6 +12,8 @@ import com.JWT.JWT.Authnetication.Repository.UserRepo;
 import com.JWT.JWT.Authnetication.Service.UserService;
 import com.JWT.JWT.Authnetication.helper.Helper;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -26,6 +28,8 @@ import java.util.Optional;
 @Service
 public class UserServiceImp implements UserService {
 
+    Logger logger = LoggerFactory.getLogger(UserServiceImp.class);
+
     @Autowired
     private UserRepo userRepo;
     @Autowired
@@ -37,14 +41,17 @@ public class UserServiceImp implements UserService {
 
     @Override
     public UserDto createUser(UserDto userDto) {
-
         User user = modelMapper.map(userDto, User.class);
 
-        Role role = roleRepo.findByRoleName("ROLE_USER").orElseThrow(() -> new UserNotFoundException("role is not found"));
+        Role role = roleRepo.findByRoleName("ROLE_USER").orElseThrow(() -> new UserNotFoundException("name is not found"));
         user.setRoles(List.of(role));
 
-        User saveUser = userRepo.save(user);
-        return modelMapper.map(saveUser,UserDto.class);
+
+
+        User savedUser = userRepo.save(user);
+        logger.info("User created with ID: {}", savedUser.getUserId());
+
+        return modelMapper.map(savedUser, UserDto.class);
     }
 
     @Override
