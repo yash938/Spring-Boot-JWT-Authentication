@@ -44,15 +44,8 @@ public class SecurityConfig {
                     }
                 }))
                 .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/user/**").permitAll()
-                                .requestMatchers(HttpMethod.POST,"/product/**").authenticated()
-                                .requestMatchers("/product/**").permitAll()
-                                .requestMatchers(HttpMethod.POST,"/product/**").hasRole("ADMIN")
-                                .requestMatchers("/order/**").hasAnyRole("ADMIN","NORMAL")
-                                .requestMatchers("/order/**").hasRole("ADMIN")
-                                .requestMatchers("/category/create").hasRole("ADMIN")
-                                .requestMatchers("/auth/generateToken").permitAll()
-                                .requestMatchers("/auth/**").authenticated()
+                        auth.requestMatchers("/user/allUsers").authenticated()
+                                .requestMatchers("/auth/**").permitAll()
                                 .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/webjars/**").permitAll()
 
                                 .anyRequest().permitAll()
