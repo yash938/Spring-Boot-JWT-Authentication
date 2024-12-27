@@ -125,6 +125,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>jenkinsCICD</finalName>
 	</build>
 
 </project>
