@@ -11,6 +11,7 @@
 	<groupId>com.JWT</groupId>
 	<artifactId>JWT-Authnetication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>JWT-Authnetication</name>
 	<description>This project is used to how to create Jwt in sping boot</description>
 	<url/>
@@ -38,7 +39,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+		 </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
