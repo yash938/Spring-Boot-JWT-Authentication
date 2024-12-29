@@ -1,4 +1,4 @@
-package Dto;
+package com.JWT.JWT.Authnetication.Dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package Dto;
+package com.JWT.JWT.Authnetication.Dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class JwtRequest {
-    private String email;
-    private String password;
+public class JwtResponse {
+
+    private String token;
+    UserDto user;
+
+
 }
+

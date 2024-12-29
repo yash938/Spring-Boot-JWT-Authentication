@@ -1,8 +1,8 @@
 package com.JWT.JWT.Authnetication.Controller;
 
-import Dto.JwtRequest;
-import Dto.JwtResponse;
-import Dto.UserDto;
+import com.JWT.JWT.Authnetication.Dto.JwtRequest;
+import com.JWT.JWT.Authnetication.Dto.JwtResponse;
+import com.JWT.JWT.Authnetication.Dto.UserDto;
 import com.JWT.JWT.Authnetication.Entity.User;
 import com.JWT.JWT.Authnetication.Security.JwtHelper;
 import org.modelmapper.ModelMapper;

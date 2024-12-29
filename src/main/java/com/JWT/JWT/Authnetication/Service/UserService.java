@@ -1,8 +1,7 @@
 package com.JWT.JWT.Authnetication.Service;
 
-import Dto.PagebleResponse;
-import Dto.UserDto;
-import com.JWT.JWT.Authnetication.Entity.User;
+import com.JWT.JWT.Authnetication.Dto.PagebleResponse;
+import com.JWT.JWT.Authnetication.Dto.UserDto;
 
 import java.util.Optional;
 

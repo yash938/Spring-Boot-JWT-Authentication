@@ -1,6 +1,6 @@
 package com.JWT.JWT.Authnetication.Repository;
 
-import Dto.UserDto;
+import com.JWT.JWT.Authnetication.Dto.UserDto;
 import com.JWT.JWT.Authnetication.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

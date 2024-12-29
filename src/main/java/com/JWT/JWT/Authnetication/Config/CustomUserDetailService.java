@@ -1,6 +1,5 @@
 package com.JWT.JWT.Authnetication.Config;
 
-import Dto.UserDto;
 import com.JWT.JWT.Authnetication.Entity.User;
 import com.JWT.JWT.Authnetication.Exception.UserNotFoundException;
 import com.JWT.JWT.Authnetication.Repository.UserRepo;

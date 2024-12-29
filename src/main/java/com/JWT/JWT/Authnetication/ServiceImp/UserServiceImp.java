@@ -1,8 +1,8 @@
 package com.JWT.JWT.Authnetication.ServiceImp;
 
 
-import Dto.PagebleResponse;
-import Dto.UserDto;
+import com.JWT.JWT.Authnetication.Dto.PagebleResponse;
+import com.JWT.JWT.Authnetication.Dto.UserDto;
 import com.JWT.JWT.Authnetication.Entity.Role;
 import com.JWT.JWT.Authnetication.Entity.User;
 import com.JWT.JWT.Authnetication.Exception.UserNotFoundException;

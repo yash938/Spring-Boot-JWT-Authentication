@@ -11,7 +11,7 @@
 	<groupId>com.JWT</groupId>
 	<artifactId>JWT-Authnetication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>JWT-Authnetication</name>
 	<description>This project is used to how to create Jwt in sping boot</description>
 	<url/>

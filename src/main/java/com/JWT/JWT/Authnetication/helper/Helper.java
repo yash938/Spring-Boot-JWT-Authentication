@@ -1,6 +1,6 @@
 package com.JWT.JWT.Authnetication.helper;
 
-import Dto.PagebleResponse;
+import com.JWT.JWT.Authnetication.Dto.PagebleResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 
